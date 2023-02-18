@@ -3,4 +3,4 @@ export interface Memory {
   clear: () => void;
 }
 
-
+export * from './buffered-chat-memory';
