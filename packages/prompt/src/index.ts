@@ -50,8 +50,8 @@ export class Prompt<
     this.schema = schema;
   }
 
-  setVariables(variables: z.infer<V>) {
-    this.variables = variables;
+  setVariables(variables: z.infer<V>): Prompt<T, V> | z.ZodError {
+    this.variables = this.schema.parse(variables);
     return this;
   }
 
@@ -83,10 +83,7 @@ export class Prompt<
           throw new Error(`Variable ${variableName} is not defined`);
         }
 
-        return nlp(variableValue)
-          .normalize({ whitespace: true })
-          .trim()
-          .text()
+        return nlp(variableValue).normalize({ whitespace: true }).trim().text();
       }
     );
     const prompt = nlp(parsedText);
@@ -94,8 +91,6 @@ export class Prompt<
 
     return prompt.text();
   }
-
-
 
   public toJson() {
     return {

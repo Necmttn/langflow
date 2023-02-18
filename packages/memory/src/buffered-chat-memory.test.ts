@@ -1,8 +1,7 @@
 import { BufferedChatMemory } from "./buffered-chat-memory";
 
 describe("BufferedChatMemory", () => {
-  const actorNames = ["Alice", "Bob"];
-  const aliceChat = new BufferedChatMemory(actorNames);
+  const aliceChat = new BufferedChatMemory(["Alice", "Bob"]);
 
   beforeAll(() => {
     aliceChat.addMessages([
@@ -13,6 +12,7 @@ describe("BufferedChatMemory", () => {
   });
 
   it("returns messages in text format", () => {
+
     expect(aliceChat.get(2).text()).toBe("Bob: Hi Alice\nAlice: How are you?");
   });
 
