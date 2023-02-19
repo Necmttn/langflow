@@ -97,7 +97,7 @@ export type GenerateCompletionOptions = {
   user?: string;
 };
 
-interface OpenAIEmbeddingsConfig {
+export interface OpenAIEmbeddingsConfig {
   model: string;
 }
 

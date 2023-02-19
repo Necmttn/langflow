@@ -40,3 +40,6 @@ export class OpenAITokenizer implements Tokenizer {
     return this.countTokens(doc.content);
   }
 }
+
+export const ENCODER = new TextEncoder();
+export const DECODER = new TextDecoder();
