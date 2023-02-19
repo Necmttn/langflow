@@ -1,0 +1,10 @@
+{
+  "extends": "tsconfig/base.json",
+  "compilerOptions": {
+    "lib": ["ES2020", "dom"],
+    "module": "ESNext",
+    "target": "es2020"
+  },
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules"]
+}

@@ -10,8 +10,9 @@
   "author": "",
   "dependencies": {
     "@langflow/memory": "workspace:*",
+    "@langflow/prompt": "workspace:*",
     "@langflow/providers": "workspace:*",
-    "@langflow/prompt": "workspace:*"
+    "xstate": "~4.36.0"
   },
   "license": "ISC"
 }

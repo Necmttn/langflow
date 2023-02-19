@@ -11,7 +11,7 @@ describe("prompt", () => {
     );
     a.setVariables({
       name: "Dr.    John    Mcgover    ",
-      age: 2,
+      age: "2",
     });
     expect(a.parseText()).toEqual(
       "Hello Dr. John Mcgover, you are 2 years old."
